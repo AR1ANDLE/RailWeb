@@ -1,29 +1,54 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Railway Manager</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Railway Manager</title>
 
-        <!-- Links -->
-        <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
 
+<body>
 
-    </head>
-    <body>
-        <div class="nav-bar">
-            <a href="./index.html"><h1>Railway Manager</h1></a>
-            <ul>
-                <li><a href="./pages/buy.html">Buy a ticket</a></li>
-                <li><a href="./pages/show.html">View Trips</a></li>
-                <li><a href="./pages/inventory.html">Inventory</a></li>
-            </ul>
-        </div>
-        <div class="container">
-            <div class="card">
-                <img src="./images/train.png" alt="">
+    <nav class="nav-bar">
+
+        <a href="./index.html">
+            <h1>Railway Manager</h1>
+        </a>
+
+        <ul>
+            <li><a href="">Buy a ticket</a></li>
+            <li><a href="./pages/show.html">View trips</a></li>
+            <li><a href="./pages/inventory.html">Inventory</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="container">
+        <section class="quickLook">
+            <h2>Quick Search</h2>
+            <input type="text" placeholder="Enter Origin..." id="Origin">
+            <input  type="text" placeholder="Enter Destination..." id="Destination">
+            <button id="searchBtn">Search</button>
+            <div class="switcher">
+                <button id="searchById">1</button>
+                <button id="searchByRoute">2</button>
+                <button id="searchByDate">3</button>
             </div>
-            <div class="card"  style="width: 750px;"></div>
-        </div>
-    </body>
+        
+        </section>
+        <section class="info-card">
+            <section id="trains" class="card active">
+                <h2>Upcoming trips</h2>
+            </section>
+        </section>
+    </main>
+
+    <script src="./databases/data.js"></script>
+    <script src="./scripts/active.js"></script>
+    <script src="./scripts/nav.js"></script>
+
+</body>
 </html>
