@@ -1,5 +1,4 @@
-
-let trains = document.querySelector('#trains')
+const trainsContainer = document.querySelector('#trains')
 let tripList = `
     <table>
         <th> Departure </th>
@@ -21,4 +20,4 @@ for(let i = 0; i < trips.length; i++) {
 
 tripList += `</table>`
 
-trains.innerHTML += tripList
+trainsContainer.innerHTML += tripList
